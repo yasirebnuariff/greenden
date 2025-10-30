@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        @media screen and (max-width:600px) {
+            
+        
+        body{
+            
+            
+            height: 100vh;
+            overflow: hidden;
+        }
+        .slide{
+            height:100vh;
+            width: 200px;
+            background-color: rgb(220 252 231);
+            position: fixed;
+            top: 0;
+            right: -250px;
+            transition: right 0.4s ease-in-out;
+            overflow-y: auto;
+            
+        
+
+        }
+        .slide.show{
+            right: 0;
+        }
+        .slide p{
+            padding-top: 100px;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;background-color: rgba(0,0,0,0.5);
+            
+            display: none;
+        }
+
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="bg-green-100 p-4  flex  items-center justify-between shadow-xl sticky top-0 z-10">
+        <h1 class="text-2xl font-mono">Greenden</h1>
+
+          <div id="overlay" class="overlay "></div> 
+          
+    <!-- slidebar -->
+         <div id="slidebar" class="slide   md:hidden">
+            
+             <ul class="flex-col gap-10 text-gray-600  pl-11 md:flex "> 
+
+            <li class="p-11"><a class="hover:underline" href="index.html">Home</a></li>
+            <li class="p-10"><a class="hover:underline" href="product.html">Products</a>
+            </li>
+            <li class="p-10"><a class="hover:underline" href="contact.html">Contact</a></li>
+
+        </ul>
+           
+         </div>      
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:hidden z-10" id="togglebtn" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2" id="symbol">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+
+
+        <ul class="flex gap-5 text-gray-600 hidden md:flex">
+
+            <li><a class="hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:underline" href="product.html">Products</a>
+            </li>
+            <li><a class="hover:underline" href="contact.html">Contact</a></li>
+
+        </ul>
+
+
+    </nav>
+    <!-- header section -->
+
+    <section class="bg-green-100 p-4 md:p-10 flex justify-center ">
+        <div class="pt-4">
+            <p class="mt-3">We Offer you a wide Range of Artificial and Natural Flowers</p>
+            <h1 class="text-3xl font-bold mt-4 md:text-5xl">Plants for your Interior</h1>
+            <div class="mt-3">
+                <button class="bg-black text-white rounded p-2 ml-1">Shop Now</button>
+                <button class="border border-black rounded p-2">Watch Video</button>
+            </div>
+            <p class="mt-3">160+ Plant Species|100+ Clients</p>
+        </div>
+        <div class=" hidden md:block ml-6">
+            <img src="./images/pot2.jpg" alt="pot image" class="w-60 mt-3 mb-3">
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="text-center mt-3">
+        <h1 class="font-bold text-2xl ">About Us</h1>
+        <p>This site for those who admire the beauty and harmony of nature</p>
+
+
+        <div class="md:flex ">
+            <div class="border border-black p-2 m-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+               <h2 class="text-xl font-medium"  > Large Assortment
+            </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto at obcaecati iusto fugiat culpa dolor, ipsam labor Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident praesentiumLorem ipsum dolor sit amet consectetur adipisicing elit. Architecto at obcaecati iusto fugiat culpa dolor, ipsam labor</p>
+
+            </div>
+            <div class="border border-black p-2 m-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                <h2 class="text-xl font-medium"  >Free and Fast Shipping
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto at obcaecati iusto fugiat culpa dolor, ipsam labor Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto at obcaecati iusto fugiat culpa dolor, ipsam laborLorem ipsum dolor sit amet consectetur adipisicing elit. Architecto at obcaecati iusto fugiat culpa dolor, ipsam labor
+            </div>
+            <div class="border border-black p-2 m-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                <h2 class="text-xl font-medium"  > 24/7 Support
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto at obcaecati iusto fugiat culpa dolor, ipsam labor Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto at obcaecati iusto fugiat culpa dolor, ipsam laborLorem ipsum dolor sit amet consectetur adipisicing elit. Architecto at obcaecati iusto fugiat culpa dolor, ipsam labor
+            </div>
+        </div>
+
+    </section>
+
+    <!-- seller section -->
+
+    <section class="text-center p-4">
+        <h1 class="font-bold text-3xl m-4 mb-10">Best Seller</h1>
+         
+        <div class="grid grid-cols-2 md:grid-cols-4 mt-7 gap-5" >
+            <div>
+                <img src="./images/pottie1.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Rose Plant</h1>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="./images/pottie2.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Lilly Plant</h1>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="./images/pottie3.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Red Rose</h1>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="./images/pottie5.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Rose </h1>
+                <p>$20</p>
+            </div>
+        </div>
+    </section>
+    <!-- customer reviews  -->
+
+    <section>
+        <h1 class="font-bold text-3xl text-center mt-5">Customer Reviews</h1>
+
+        <div class="flex  flex-col gap-5 justify-center text-white m-5">
+            <div class="bg-green-900 p-5 container">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error numquam earum ad itaque sit excepturi maiores sunt obcaecati deleniti cupiditate, ullam perferendis! Architecto cumque officiis, non vitae sapiente neque magni!</p>
+                <p class="font-bold text-yellow-500">Genny Mathew</p>
+            </div>
+            <div class="bg-green-900 p-5 container">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error numquam earum ad itaque sit excepturi maiores sunt obcaecati deleniti cupiditate, ullam perferendis! Architecto cumque officiis, non vitae sapiente neque magni!</p>
+                <p class="font-bold text-yellow-500">Hawkson</p>
+            </div>
+            <div class="bg--900 p-5 container">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error numquam earum ad itaque sit excepturi maiores sunt obcaecati deleniti cupiditate, ullam perferendis! Architecto cumque officiis, non vitae sapiente neque magni!</p>
+                <p class="font-bold text-yellow-500">Johnson Marlin</p>
+            </div>
+        </div>
+        
+    </section>
+    <!-- news letter section -->
+     <section class="text-center">
+        <h1 class="font-bold text-3xl mt-5 " >Join Our News Letter</h1>
+        <p class="text-center">Signup for our email neswpaper to get exclusive discounts,updates,and more</p>
+        <input type="text" class="border border-black text-center m-3 p-2 " style="width: 80%;"> <br>
+        <button class="m-3 p-2 bg-black text-white rounded">subscribe</button>
+     </section>
+     <!-- footer -->
+      <section class="bg-green-100 p-10">
+        <h1 class="text-4xl font-bold font-mono"  >Greenden</h1>
+        <p class="mt-3">The standard chunk of Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolore. for those interest</p>
+        <p class="mt-2">@ 2025 Greenday.com</p>
+      </section>
+
+      <script>
+        var togglebtn=document.getElementById("togglebtn")
+        var slidebar=document.getElementById("slidebar")
+        var overlay=document.getElementById("overlay")
+         
+        togglebtn.addEventListener("click",function(){
+            slidebar.classList.toggle("show");
+           if(slidebar.classList.contains("show")){
+            document.body.style.overflow="hidden"
+            overlay.style.display="block"
+           }
+          else{
+             document.body.style.overflow="auto"
+             overlay.style.display="none"
+          }})
+      </script>
+
+</body>
+
+</html>
